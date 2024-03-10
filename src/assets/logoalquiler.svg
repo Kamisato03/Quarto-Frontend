@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 850.39 850.39" style="enable-background:new 0 0 850.39 850.39;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#010101;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#E3D2C6;}
+	.st3{display:none;fill:none;stroke:#F39DAA;stroke-miterlimit:10;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#5FBFB8;}
+	.st5{fill:#625C5C;stroke:#635C5C;stroke-miterlimit:10;}
+	.st6{font-family:'GlacialIndifference-Regular';}
+	.st7{font-size:150px;}
+</style>
+<g id="Layer_5" class="st0">
+</g>
+<g id="New_Layer" class="st0">
+	<path class="st1" d="M135.14,558.17c19.3-12.04,38.12-23.25,56.9-34.54c4.4-2.64,8.97-3.72,13.53-1.02
+		c19.29,11.4,38.49,22.92,57.65,34.53c1,0.61,1.28,2.42,2.47,4.84c-20.32,13.25-41.28,25.28-62.92,36.15
+		c-3.28,1.65-6.69,0.79-9.62-0.9c-18.59-10.71-37.13-21.51-55.61-32.41C135.54,563.64,133.75,561.82,135.14,558.17z"/>
+</g>
+<g id="MasterLayer_1" class="st0">
+</g>
+<g id="Layer_3">
+	<path class="st2" d="M76.35,517.68"/>
+	<polyline class="st2" points="184.89,321.09 273.23,373.43 273.23,479.47 220.38,509.26 282.16,545.01 334.93,513.86 
+		334.93,338.54 185.02,250.41 	"/>
+	<polyline class="st2" points="185.19,321.09 96.85,373.43 96.85,479.47 149.7,509.26 87.91,545.01 35.14,513.86 35.14,338.54 
+		185.06,250.41 	"/>
+	<line class="st3" x1="185.36" y1="528.58" x2="380.08" y2="641.52"/>
+	<line class="st3" x1="124.34" y1="562.73" x2="319.06" y2="675.67"/>
+	<polygon class="st4" points="124.09,565.98 185.12,532.26 275.96,584.82 215.5,620.04 	"/>
+</g>
+<g id="Layer_4">
+	<text transform="matrix(1 0 0 1 360.2921 545.0056)" class="st5 st6 st7">UARTO</text>
+</g>
+</svg>
