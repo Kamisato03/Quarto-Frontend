@@ -6,7 +6,7 @@
   <h4 class="title-login">Inicia sesión</h4>
   <q-form>
     <div class="input-datos">
-      <p class="subtitul">Correo electrónico</p>
+      <p class="q-mb-xs">Correo electrónico</p>
       <q-input
         outlined
         class="input-login"
@@ -24,7 +24,7 @@
       ></q-input>
     </div>
     <div class="input-datos">
-      <p class="subtitul">Contraseña</p>
+      <p class="q-mb-xs">Contraseña</p>
       <q-input
         outlined
         class="input-login"
@@ -76,7 +76,7 @@
     />
     <label for="">Iniciar con Google</label></q-btn
   >
-  <div>
+  <div style="text-align: center" class="q-pb-xl">
     <b class="subtitulo">¿Aún no tienes cuenta? </b>
     <a class="subtitulo1" href=""> <b>Regístrate</b></a>
   </div>
@@ -101,7 +101,7 @@ const right = ref(false);
 
 .input-datos {
   width: 90%;
-  margin-bottom: -15px;
+  margin-bottom: 5px;
   padding-left: 35px;
   color: #635c5c;
   font-size: 1.2rem;
@@ -123,6 +123,7 @@ const right = ref(false);
 .forgotPwd {
   font-size: 1.1rem;
   margin-bottom: 55px;
+  margin-top: -5px;
   color: #5fbfb8;
   text-align: center;
 }
@@ -135,7 +136,7 @@ const right = ref(false);
   width: 83%;
   margin-left: 36px;
   background-color: #5fbfb8 !important;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .btn-google {
@@ -158,14 +159,14 @@ const right = ref(false);
 .logoRosa {
   width: 54%;
   height: auto;
-  margin-left: 92px;
-  margin-top: 13px;
+  margin-left: 106px;
+  margin-top: 42px;
 }
 .subtitulo {
   color: #797676;
   font-size: 1.2rem;
   font-weight: normal;
-  margin-left: 65px;
+  text-align: center;
 }
 .subtitulo1 {
   color: #f39daa;
