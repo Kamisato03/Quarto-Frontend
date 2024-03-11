@@ -4,9 +4,9 @@
       <img :src="logo" alt="Logo" class="logo-image q-mb-md" />
       <div class="color-line"></div>
       <div class="text-h6">Regístrate</div>
-      <q-form @submit.prevent="submitForm">
+      <q-form @submit.prevent="submitForm" class="form">
         <div>
-          <label for="nombre">Nombre</label>
+          <label class="text-subtitle1" for="nombre">Nombre</label>
           <q-input
             outlined
             dense
@@ -16,10 +16,11 @@
           ></q-input>
         </div>
         <div>
-          <label for="telefono">Teléfono</label>
+          <label class="text-subtitle1" for="telefono">Teléfono</label>
           <q-input
             outlined
             dense
+            class="q-mb-none"
             v-model="user.telefono"
             placeholder="Ingresa tu teléfono"
             type="tel"
@@ -29,7 +30,7 @@
           ></q-input>
         </div>
         <div>
-          <label for="email">Correo electrónico</label>
+          <label class="text-subtitle1" for="email">Correo electrónico</label>
           <q-input
             outlined
             dense
@@ -41,7 +42,7 @@
           ></q-input>
         </div>
         <div>
-          <label for="password">Contraseña</label>
+          <label class="text-subtitle1" for="password">Contraseña</label>
           <q-input
             outlined
             dense
@@ -60,7 +61,9 @@
           </q-input>
         </div>
         <div>
-          <label for="confirmPassword">Confirma tu contraseña</label>
+          <label class="text-subtitle1" for="confirmPassword"
+            >Confirma tu contraseña</label
+          >
           <q-input
             outlined
             dense
@@ -85,13 +88,10 @@
         <q-btn
           label="Crear cuenta"
           type="submit"
-          class="full-width-button"
+          class="full-width-button q-mb-lg"
           :style="{ backgroundColor: '#F39DAA', color: '#ffffff' }"
         />
       </div>
-
-      <div class="text-center q-my-md">— o —</div>
-
       <div class="button-container q-mb-md">
         <q-btn type="button" class="google-button-custom full-width-button">
           <img :src="logoGoogle" alt="Logo" class="button-icon" />
@@ -108,11 +108,10 @@
     </div>
   </div>
 </template>
-  
-  
+
 <script setup>
 import { ref } from "vue";
-import logo from "../assets/logoalquiler.svg";
+import logo from "../assets/logoAzul.svg";
 import logoGoogle from "../assets/logo_google.svg";
 
 const user = ref({
@@ -148,8 +147,8 @@ function gotoLogin() {
   console.log("Ir a login");
 }
 </script>
-  
-  <style scoped>
+
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap");
 
 label {
@@ -160,11 +159,8 @@ label {
 }
 
 .logo-image {
-  width: 60%;
   height: auto;
   display: block;
-  margin-bottom: -30px;
-  margin-top: -50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -177,10 +173,7 @@ label {
 }
 
 .register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  margin: 10px 20px 10px 20px;
   font-family: "Glacial Indifference", sans-serif;
 }
 
@@ -218,4 +211,3 @@ label {
   vertical-align: middle;
 }
 </style>
-  

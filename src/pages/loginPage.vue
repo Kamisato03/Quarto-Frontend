@@ -1,84 +1,95 @@
 <template>
-  <div>
-    <img src="../assets/logoRosa.svg" class="logoRosa" />
-  </div>
-  <div class="line"></div>
-  <h4 class="title-login">Inicia sesión</h4>
-  <q-form>
-    <div class="input-datos">
-      <p class="q-mb-xs">Correo electrónico</p>
-      <q-input
-        outlined
-        class="input-login"
-        v-model="email"
-        bg-color="white"
-        style="font-size: 1.1rem; border: #635c5c"
-        dense
-        placeholder="Ingresa tu correo electrónico"
-        :rules="[
-          (val) => !!val || 'Este campo es requerido',
-          (val) =>
-            /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(val) ||
-            'Formato incorrecto de email',
-        ]"
-      ></q-input>
+  <div class="glacial-font">
+    <div>
+      <img src="../assets/logoRosa.svg" class="logoRosa q-mb-md q-mt-lg" />
     </div>
-    <div class="input-datos">
-      <p class="q-mb-xs">Contraseña</p>
-      <q-input
-        outlined
-        class="input-login"
-        v-model="password"
-        bg-color="white"
-        style="font-size: 1.1rem; border: #635c5c"
-        dense
-        placeholder="Ingresa tu contraseña"
-        :rules="[
-          (val) => {
-            if (val && val.length <= 5) {
-              return 'La contraseña debe tener mínimo 6 caracteres';
-            }
-            return true;
-          },
-        ]"
-        hide-bottom-space
-        :type="showPassword ? 'text' : 'password'"
-      >
-        <template v-slot:append>
-          <q-icon
-            :name="showPassword ? 'remove_red_eye' : 'visibility_off'"
-            class="cursor-pointer"
-            style="color: #635c5c"
-            @click="showPassword = !showPassword"
-          />
-        </template>
-      </q-input>
-    </div>
-
-    <div class="check-rec">
-      <div class="q-gutter-sm">
-        <q-checkbox v-model="right" label="Recordarme" color="cyan" />
+    <div class="line"></div>
+    <h4 class="title-login">Inicia sesión</h4>
+    <q-form>
+      <div class="input-datos">
+        <p class="q-mb-xs">Correo electrónico</p>
+        <q-input
+          outlined
+          class="input-login"
+          v-model="email"
+          bg-color="white"
+          style="font-size: 1.1rem; border: #635c5c"
+          dense
+          placeholder="Ingresa tu correo electrónico"
+          :rules="[
+            (val) => !!val || 'Este campo es requerido',
+            (val) =>
+              /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(val) ||
+              'Formato incorrecto de email',
+          ]"
+        ></q-input>
       </div>
+      <div class="input-datos">
+        <p class="q-mb-xs">Contraseña</p>
+        <q-input
+          outlined
+          class="input-login"
+          v-model="password"
+          bg-color="white"
+          style="font-size: 1.1rem; border: #635c5c"
+          dense
+          placeholder="Ingresa tu contraseña"
+          :rules="[
+            (val) => {
+              if (val && val.length <= 5) {
+                return 'La contraseña debe tener mínimo 6 caracteres';
+              }
+              return true;
+            },
+          ]"
+          hide-bottom-space
+          :type="showPassword ? 'text' : 'password'"
+        >
+          <template v-slot:append>
+            <q-icon
+              :name="showPassword ? 'remove_red_eye' : 'visibility_off'"
+              class="cursor-pointer"
+              style="color: #635c5c"
+              @click="showPassword = !showPassword"
+            />
+          </template>
+        </q-input>
+      </div>
+
+      <div class="check-rec">
+        <div class="q-gutter-sm">
+          <q-checkbox v-model="right" label="Recordarme" color="cyan" />
+        </div>
+      </div>
+      <q-btn
+        type="submit"
+        class="btn-entrar"
+        label="Entrar"
+        text-color="white"
+      />
+    </q-form>
+    <div class="forgotPwd">
+      <a
+        class="text-center text-secondary"
+        style="text-decoration: none"
+        href=""
+      >
+        <b>¿Olvidaste tu contraseña?</b></a
+      >
     </div>
-    <q-btn type="submit" class="btn-entrar" label="Entrar" text-color="white" />
-  </q-form>
-  <div class="forgotPwd">
-    <a class="text-center text-secondary" style="text-decoration: none" href="">
-      <b>¿Olvidaste tu contraseña?</b></a
+    <q-btn class="btn-google">
+      <img
+        src="../assets/logogoogle.svg"
+        width="25"
+        height="30"
+        class="iconGoogleBtn"
+      />
+      <label for="">Iniciar con Google</label></q-btn
     >
-  </div>
-  <q-btn class="btn-google">
-    <img
-      src="../assets/logogoogle.svg"
-      width="25"
-      height="30"
-      class="iconGoogleBtn"
-    />
-    <label for="">Iniciar con Google</label></q-btn
-  >
-  <div style="text-align: center" class="q-pb-xl">
-    <b class="subtitulo">¿Aún no tienes cuenta? </b>
-    <a class="subtitulo1" href=""> <b>Regístrate</b></a>
+    <div style="text-align: center" class="q-pb-xl">
+      <b class="subtitulo">¿Aún no tienes cuenta? </b>
+      <a class="subtitulo1" href=""> <b>Regístrate</b></a>
+    </div>
   </div>
 </template>
 
@@ -157,10 +168,10 @@ const right = ref(false);
 }
 
 .logoRosa {
-  width: 54%;
   height: auto;
-  margin-left: 106px;
-  margin-top: 42px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .subtitulo {
   color: #797676;
