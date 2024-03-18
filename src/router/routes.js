@@ -19,6 +19,10 @@ const routes = [
     path: "/login",
     component: () => import("pages/loginPage.vue"),
   },
+  {
+    path: "/menu-apartment",
+    component: () => import("pages/menuApartmentPage.vue"),
+  },
 ];
 
 export default routes;
