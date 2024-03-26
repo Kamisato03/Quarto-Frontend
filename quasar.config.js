@@ -11,7 +11,7 @@
 const { configure } = require("quasar/wrappers");
 const path = require("path");
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(function (ctx) {
   return {
     eslint: {
       // fix: true,
@@ -63,7 +63,10 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+        FRONT_URI: ctx.dev ? "http://localhost:9000" : "http://skillsage.xyz",
+        API_REST: ctx.dev ? "http://localhost:5000/api/v1" : "",
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
@@ -99,7 +102,7 @@ module.exports = configure(function (/* ctx */) {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     framework: {
-      config: {iconSet: 'material-icons'},
+      config: { iconSet: "material-icons" },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
@@ -112,7 +115,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: [],
+      plugins: ["Dialog", "Notify", "Loading"],
     },
 
     // animations: 'all', // --- includes all animations

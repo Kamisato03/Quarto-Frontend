@@ -5,7 +5,7 @@
     </div>
     <div class="line"></div>
     <h4 class="title-login">Inicia sesión</h4>
-    <q-form>
+    <q-form @submit.prevent="submitLogin" ref="formAdd">
       <div class="input-datos">
         <p class="q-mb-xs">Correo electrónico</p>
         <q-input
@@ -88,19 +88,60 @@
     >
     <div style="text-align: center" class="q-pb-xl">
       <b class="subtitulo">¿Aún no tienes cuenta? </b>
-      <a class="subtitulo1" href=""> <b>Regístrate</b></a>
+      <a class="subtitulo1" href="/register"> <b>Regístrate</b></a>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { useUserStore } from "../stores/user-store";
+import { useQuasar } from "quasar";
+
+//tienda, router y notificaciones
+const userStore = useUserStore();
+const router = useRouter();
+const $q = useQuasar();
 
 //variables a usar
 const email = ref("");
 const password = ref("");
 const showPassword = ref(false);
 const right = ref(false);
+
+const submitLogin = async () => {
+  try {
+    await userStore.access(email.value, password.value);
+    router.push("/menu");
+    email.value = "";
+    password.value = "";
+    formAdd.value.resetValidation();
+  } catch (error) {
+    if (error.error) {
+      alertFunction(error.error);
+    } else {
+      alertFunction(error.errors[0].msg);
+    }
+  }
+};
+
+const logout = async () => {
+  await userStore.logout();
+};
+logout();
+
+const alertFunction = (msg) => {
+  $q.dialog({
+    title: "Error",
+    message: msg,
+    dark: true,
+    ok: {
+      push: true,
+      color: "secondary",
+    },
+  });
+};
 </script>
 
 <style scoped>
